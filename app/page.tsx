@@ -11,7 +11,7 @@ export default function Home() {
             🎄 Merry PBL 🎄
           </h1>
           <p className="text-lg sm:text-xl text-gray-700 mb-8 sm:mb-12">
-            친구들을 위한 크리스마스 이벤트 웹사이트
+            G-PBL 팀을 위한 크리스마스 이벤트 웹사이트
           </p>
           <div className="grid sm:grid-cols-2 gap-4 sm:gap-8 max-w-2xl mx-auto">
             <Link

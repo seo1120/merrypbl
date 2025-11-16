@@ -6,7 +6,7 @@ import { AuthProvider } from './components/AuthProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Merry PBL - 크리스마스 이벤트',
+  title: 'Merry PBL',
   description: 'G-PBL 팀을 위한 크리스마스 이벤트 웹사이트',
 }
 
