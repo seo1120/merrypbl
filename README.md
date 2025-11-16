@@ -14,6 +14,8 @@
 
 ## 설정 방법
 
+### 로컬 개발
+
 1. 의존성 설치:
 ```bash
 npm install
@@ -34,4 +36,15 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```bash
 npm run dev
 ```
+
+### Vercel 배포
+
+자세한 배포 가이드는 [VERCEL_DEPLOY.md](./VERCEL_DEPLOY.md)를 참고하세요.
+
+**빠른 체크리스트:**
+1. ✅ GitHub에 코드 푸시
+2. ✅ Vercel에서 프로젝트 연결
+3. ✅ 환경 변수 설정 (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
+4. ✅ Supabase에서 Google OAuth Redirect URL 설정
+5. ✅ Supabase Edge Function 배포
 
