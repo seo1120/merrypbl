@@ -70,7 +70,14 @@ export default function ManitoPage() {
       .order('joined_at', { ascending: true })
 
     if (participantsData) {
-      setParticipants(participantsData as Participant[])
+      // Transform the data to match the Participant type
+      const transformedParticipants: Participant[] = participantsData.map((p: any) => ({
+        id: p.id,
+        user_id: p.user_id,
+        joined_at: p.joined_at,
+        profiles: Array.isArray(p.profiles) ? p.profiles[0] : p.profiles,
+      }))
+      setParticipants(transformedParticipants)
     }
 
     // Check if user has a match
@@ -88,7 +95,16 @@ export default function ManitoPage() {
       .single()
 
     if (matchData) {
-      setMatch(matchData as Match)
+      // Transform the data to match the Match type
+      const transformedMatch: Match = {
+        id: matchData.id,
+        giver_user_id: matchData.giver_user_id,
+        receiver_user_id: matchData.receiver_user_id,
+        profiles_receiver: Array.isArray(matchData.profiles_receiver)
+          ? matchData.profiles_receiver[0]
+          : matchData.profiles_receiver,
+      }
+      setMatch(transformedMatch)
     }
 
     setFetching(false)

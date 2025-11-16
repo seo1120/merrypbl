@@ -92,8 +92,15 @@ export default function GuestbookPage() {
 
     if (error) {
       console.error('Error fetching messages:', error)
-    } else {
-      setMessages(data as Message[])
+    } else if (data) {
+      // Transform the data to match the Message type
+      const transformedData: Message[] = data.map((msg: any) => ({
+        id: msg.id,
+        content: msg.content,
+        created_at: msg.created_at,
+        profiles: Array.isArray(msg.profiles) ? msg.profiles[0] : msg.profiles,
+      }))
+      setMessages(transformedData)
     }
   }
 
