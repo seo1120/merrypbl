@@ -262,6 +262,39 @@ export default function ManitoPage() {
 
       {/* Main Content */}
       <div className="relative z-10 max-w-2xl mx-auto px-4 pb-8">
+        {/* Rules Section */}
+        <div className="bg-primary p-6 sm:p-8 rounded-[30px] shadow-lg mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 text-center">
+            📋 Rules
+          </h2>
+          <div className="space-y-3 text-gray-900">
+            <div className="flex items-start gap-3">
+              <span className="text-lg">1.</span>
+              <p className="text-sm sm:text-base flex-1">
+                각 참가자는 랜덤으로 배정된 한 명에게 선물을 준비합니다.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-lg">2.</span>
+              <p className="text-sm sm:text-base flex-1">
+                선물 가격 범위는 <span className="font-bold">$20</span>입니다.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-lg">3.</span>
+              <p className="text-sm sm:text-base flex-1">
+                매칭 결과는 비밀로 유지되며, 크리스마스 파티(12/17) 당일까지 비밀로 지켜주세요.
+              </p>
+            </div>
+            <div className="flex items-start gap-3">
+              <span className="text-lg">4.</span>
+              <p className="text-sm sm:text-base flex-1">
+                크리스마스 파티에서 선물을 교환합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Login Required Message */}
         {!user && (
           <div className="bg-primary p-6 sm:p-8 rounded-[30px] shadow-lg text-center mb-6 sm:mb-8">
